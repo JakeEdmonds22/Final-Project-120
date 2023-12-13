@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>EpicEats!</title>
+
+    <!-- Link to css -->
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="/admin/admin.css">
+
+    <!-- Link to swiper css -->
+    <link rel="stylesheet" href="./swiper-bundle.min.css">
+
+    <!-- Link to icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://kit.fontawesome.com/c93511b22d.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="adminPage flex">
+        <div class="sideMenu">
+            <div class="logoDiv flex">
+                <img src="../Assests/floating (2).png" alt="Logo Image">
+                <h1>EpicEats!</h1>
+            </div>
+
+            <div class="menuList">
+                <span class="listTitle">
+                    MENU
+                </span>
+                <ul class="menuLists">
+                    <li class="listItem">
+                        <a href="dasboard.html" class="menuLink flex">
+                            <i class='bx bxs-home-smile icon'></i>
+                            <span class="LinkText">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="listItem">
+                        <a href="orders.html" class="menuLink flex">
+                            <i class='bx bxs-cart icon' ></i>
+                            <span class="LinkText">All Orders</span>
+                        </a>
+                    </li>
+
+                    <li class="listItem">
+                        <a href="table.html" class="menuLink flex">
+                            <i class="uil uil-lamp icon"></i>
+                            <span class="LinkText">Table Reservations</span>
+                        </a>
+                    </li>
+
+                    <li class="listItem">
+                        <a href="menu.html" class="menuLink flex">
+                            <i class='bx bxs-bowl-rice icon'></i>
+                            <span class="LinkText">All Menu</span>
+                        </a>
+                    </li>
+
+                    <li class="listItem">
+                        <a href="review.html" class="menuLink flex">
+                            <i class='bx bxs-message-alt-dots icon' ></i>
+                            <span class="LinkText">Customer Reviews</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="menuList">
+                <span class="listTitle">
+                        OTHERS
+                </span>
+                <ul class="menuLists">
+                   
+
+                    <li class="listItem">
+                        <a href="db.html" class="menuLink flex">
+                            <i class='bx bxs-face icon' ></i>
+                            <span class="LinkText">Delivery Drivers</span>
+                        </a>
+                    </li>
+
+                    <li class="listItem">
+                        <a href="subscribers.html" class="menuLink flex">  
+                            <i class='bx bxs-envelope icon' ></i>
+                            <span class="LinkText">Subscription</span>
+                        </a>
+                    </li>
+
+                    <li class="listItem">
+                        <a href="settings.html" class="menuLink flex">
+                            <i class='bx bxs-cog icon' ></i>
+                            <span class="LinkText">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+         <div class="mainBody">
+            <div class="topSection flex">
+                <div class="title">
+                    <span><strong>EpicEats!</strong> Menu Items</span>
+                </div>
+
+                <div class="adminDiv flex">
+                    <div class="notDiv">
+                        <i class='bx bxs-bell icon' ></i>
+                        <span class="count">4</span>
+                    </div>
+                    <div class="imgDiv flex">
+                        <img src="../Assests/adminpic.jpg" alt="Account Admin Image">
+                        <span class="name">Bob <br><small>Administrator</small></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mainBodyContentContainer">
+                
+                <div class="menuContainer grid">
+                    <div class="foodCategoryDiv" id="food">
+                        <div class="heading flex">
+                            <span class="">Appetizers Category</span>
+                            <button class="btn">
+                                <a href="addFood.html" class="flex">Add Food <i class="uil uil-plus icon"></i></a>
+                            </button>
+                        </div>
+
+                        <div class="itemsContainer flex">
+                            <div class="singleItem">
+                                <div class="imgDiv">
+                                <img src="../Assests/new (1).png">
+                                </div>
+      
+                                <div class="itemInfo">
+                                    <span class="itemName">Mozzarella Sticks</span>
+                                    <p class="desc">Indulge in our irresistibly crispy Mozzarella Sticks – golden brown on the outside, warm and gooey on the inside.</p>
+                                    <div class="itemBottom flex">
+                                      <span class="price">$8.00</span>
+                                    <div>
+                                      <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+          
+                                      <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="singleItem">
+                                <div class="imgDiv">
+                                <img src="../Assests/new (2).png">
+                                </div>
+      
+                                <div class="itemInfo">
+                                    <span class="itemName">Bacon Cheese Fries</span>
+                                    <p class="desc">Savor the ultimate comfort food experience with our indulgent Bacon Cheese Fries.</p>
+                                    <div class="itemBottom flex">
+                                      <span class="price">$10.00</span>
+                                    <div>
+                                      <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+          
+                                      <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="singleItem">
+                                <div class="imgDiv">
+                                <img src="../Assests/new (3).png">
+                                </div>
+      
+                                <div class="itemInfo">
+                                    <span class="itemName">Nachos</span>
+                                    <p class="desc">Crispy tortilla chips layered with melted cheese, zesty jalapeños, and a medley of fresh toppings.</p>
+                                    <div class="itemBottom flex">
+                                      <span class="price">$12.00</span>
+                                    <div>
+                                      <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+          
+                                      <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="singleItem">
+                                <div class="imgDiv">
+                                <img src="../Assests/new (4).png">
+                                </div>
+      
+                                <div class="itemInfo">
+                                    <span class="itemName">Salad</span>
+                                    <p class="desc">Crafted with care, our salads feature crisp, farm-fresh greens, an array of colorful vegetables, and a medley of tantalizing toppings.</p>
+                                    <div class="itemBottom flex">
+                                      <span class="price">$8.00</span>
+                                    <div>
+                                      <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+          
+                                      <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="drinksCategoryDiv" id="drink">
+                        <span class="subTitle">
+                            Entrees Category
+                        </span>
+
+                        <div class="itemsContainer flex">
+                            <div class="singleItem">
+                                <div class="imgDiv">
+                                <img src="../Assests/new (5).png">
+                                </div>
+      
+                                <div class="itemInfo">
+                                    <span class="itemName">Pizza</span>
+                                    <p class="desc">Crafted with love and the finest ingredients, our pizzas boast a crispy, golden crust, generously topped with gooey melted cheese and a symphony of flavors.</p>
+                                    <div class="itemBottom flex">
+                                      <span class="price">$15.00</span>
+                                    <div>
+                                      <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+          
+                                      <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="singleItem">
+                                <div class="imgDiv">
+                                <img src="../Assests/new (6).png">
+                                </div>
+      
+                                <div class="itemInfo">
+                                    <span class="itemName">Cheeseburger</span>
+                                    <p class="desc">Juicy, flame-grilled perfection topped with a slice of melted cheese, nestled within a soft, toasted bun.</p>
+                                    <div class="itemBottom flex">
+                                      <span class="price">$12.00</span>
+                                    <div>
+                                      <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+          
+                                      <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="singleItem">
+                                <div class="imgDiv">
+                                <img src="../Assests/new (7).png">
+                                </div>
+      
+                                <div class="itemInfo">
+                                    <span class="itemName">Barbecue Ribs</span>
+                                    <p class="desc">Slow-cooked to tender perfection, our ribs are a carnivore's dream - glazed with a smoky, tangy barbecue sauce that caramelizes to create a mouthwatering masterpiece.</p>
+                                    <div class="itemBottom flex">
+                                      <span class="price">$17.00</span>
+                                    <div>
+                                      <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+          
+                                      <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="singleItem">
+                                <div class="imgDiv">
+                                <img src="../Assests/new (8).png">
+                                </div>
+      
+                                <div class="itemInfo">
+                                    <span class="itemName">Steak Dinner</span>
+                                    <p class="desc">Immerse yourself in a world of culinary perfection as our expert chefs prepare a succulent, perfectly seared steak to your liking.</p>
+                                    <div class="itemBottom flex">
+                                      <span class="price">$25.00</span>
+                                    <div>
+                                      <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+          
+                                      <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="foodCategoryDiv" id="breakfast">
+                        <span class="subTitle">
+                            Dessert Category
+                        </span>
+
+                        <div class="itemsContainer flex">
+                            <div class="singleItem">
+                                <div class="imgDiv">
+                                <img src="../Assests/new (9).png">
+                                </div>
+      
+                                <div class="itemInfo">
+                                    <span class="itemName">Rasberry Cupcake</span>
+                                    <p class="desc">This exquisite treat features a moist and fluffy cake infused with the sweet essence of ripe raspberries.</p>
+                                    <div class="itemBottom flex">
+                                      <span class="price">$4.50</span>
+                                    <div>
+                                      <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+          
+                                      <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="singleItem">
+                                <div class="imgDiv">
+                                <img src="../Assests/new (10).png">
+                                </div>
+      
+                                <div class="itemInfo">
+                                    <span class="itemName">Confetti Cupcake</span>
+                                    <p class="desc">This whimsical delight is a carnival of colors and flavors, featuring a light and moist vanilla cake speckled with vibrant confetti sprinkles.</p>
+                                    <div class="itemBottom flex">
+                                      <span class="price">$4.25</span>
+                                    <div>
+                                      <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+          
+                                      <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="singleItem">
+                                <div class="imgDiv">
+                                <img src="../Assests/new (11).png">
+                                </div>
+      
+                                <div class="itemInfo">
+                                    <span class="itemName">Strawberry Cupcake</span>
+                                    <p class="desc">Our moist vanilla cake is infused with the natural sweetness of ripe strawberries, creating a perfect harmony of flavors.</p>
+                                    <div class="itemBottom flex">
+                                      <span class="price">$4.00</span>
+                                    <div>
+                                      <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+          
+                                      <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="singleItem">
+                                <div class="imgDiv">
+                                <img src="../Assests/new (12).png">
+                                </div>
+      
+                                <div class="itemInfo">
+                                    <span class="itemName">Cake</span>
+                                    <p class="desc">Each slice is a masterpiece of indulgence, featuring layers of moist, tender cake generously enveloped in rich, velvety frosting. </p>
+                                    <div class="itemBottom flex">
+                                      <span class="price">$10.00</span>
+                                    <div>
+                                      <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+          
+                                      <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drinksCategoryDiv" id="drink">
+                            <span class="subTitle">
+                                Kids Category
+                            </span>
+    
+                            <div class="itemsContainer flex">
+                                <div class="singleItem">
+                                    <div class="imgDiv">
+                                    <img src="../Assests/new (13).png">
+                                    </div>
+          
+                                    <div class="itemInfo">
+                                        <span class="itemName">Chicken Nuggets and Fries</span>
+                                        <p class="desc">Crispy, golden nuggets of tender chicken, perfectly seasoned and paired with a side of golden, perfectly seasoned fries.</p>
+                                        <div class="itemBottom flex">
+                                          <span class="price">$8.00</span>
+                                        <div>
+                                          <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+              
+                                          <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="singleItem">
+                                    <div class="imgDiv">
+                                    <img src="../Assests/new (14).png">
+                                    </div>
+          
+                                    <div class="itemInfo">
+                                        <span class="itemName">Grilled Cheese</span>
+                                        <p class="desc">Served on perfectly toasted artisanal bread, our sandwich features a golden, melted medley of premium cheeses, creating a gooey and indulgent masterpiece.</p>
+                                        <div class="itemBottom flex">
+                                          <span class="price">$6.00</span>
+                                        <div>
+                                          <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+              
+                                          <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="singleItem">
+                                    <div class="imgDiv">
+                                    <img src="../Assests/new (15).png">
+                                    </div>
+          
+                                    <div class="itemInfo">
+                                        <span class="itemName">Cheese Quesadilla</span>
+                                        <p class="desc">Crafted with finesse, each tortilla is generously filled with a perfectly melted blend of premium cheeses, creating a symphony of flavors with every bite.</p>
+                                        <div class="itemBottom flex">
+                                          <span class="price">$7.00</span>
+                                        <div>
+                                          <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+              
+                                          <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="singleItem">
+                                    <div class="imgDiv">
+                                    <img src="../Assests/new (16).png">
+                                    </div>
+          
+                                    <div class="itemInfo">
+                                        <span class="itemName">Hot Dog</span>
+                                        <p class="desc">Our perfectly grilled, high-quality frankfurter is nestled in a soft, fresh bun and loaded with your choice of toppings.</p>
+                                        <div class="itemBottom flex">
+                                          <span class="price">$5.00</span>
+                                        <div>
+                                          <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+              
+                                          <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drinksCategoryDiv" id="drink">
+                            <span class="subTitle">
+                                Drinks Category
+                            </span>
+    
+                            <div class="itemsContainer flex">
+                                <div class="singleItem">
+                                    <div class="imgDiv">
+                                    <img src="../Assests/new (17).png">
+                                    </div>
+          
+                                    <div class="itemInfo">
+                                        <span class="itemName">Blue Lagoon Margarita</span>
+                                        <p class="desc">his vibrant and tropical concoction combines premium tequila, blue curaçao, and a splash of zesty citrus, creating a visually stunning and palate-pleasing masterpiece.</p>
+                                        <div class="itemBottom flex">
+                                          <span class="price">$12.00</span>
+                                        <div>
+                                          <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+              
+                                          <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="singleItem">
+                                    <div class="imgDiv">
+                                    <img src="../Assests/new (18).png">
+                                    </div>
+          
+                                    <div class="itemInfo">
+                                        <span class="itemName">Mai Tai</span>
+                                        <p class="desc">Crafted to perfection, this classic Polynesian cocktail is a harmonious blend of premium light and dark rums, balanced with a touch of almond syrup, orange liqueur, and freshly squeezed lime juice.</p>
+                                        <div class="itemBottom flex">
+                                          <span class="price">$8.00</span>
+                                        <div>
+                                          <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+              
+                                          <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="singleItem">
+                                    <div class="imgDiv">
+                                    <img src="../Assests/new (19).png">
+                                    </div>
+          
+                                    <div class="itemInfo">
+                                        <span class="itemName">Orange Liquer Mimosa</span>
+                                        <p class="desc">This effervescent delight combines crisp sparkling wine with a splash of vibrant orange liqueur, creating a refreshing and bubbly libation that's perfect for any celebration.</p>
+                                        <div class="itemBottom flex">
+                                          <span class="price">$10.00</span>
+                                            <div>
+                                            <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+                
+                                            <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="singleItem">
+                                    <div class="imgDiv">
+                                    <img src="../Assests/new (20).png">
+                                    </div>
+          
+                                    <div class="itemInfo">
+                                        <span class="itemName">Lemon Vodka Cocktail</span>
+                                        <p class="desc">Elevate your dining experience with the zingy allure of our Lemon Vodka Cocktail - a true celebration of taste and sophistication.</p>
+                                        <div class="itemBottom flex">
+                                          <span class="price">$9.00</span>
+                                        <div>
+                                          <a href="<?php echo SITEURL?>admin/updateItem.php?id=<?php echo $id?>"><i class="uil uil-edit icon"></i></a>
+              
+                                          <a href="<?php echo SITEURL ?>admin/deleteItem.php?id= <?php echo $id;?>"><i class="uil uil-times-circle deleteIcon icon"></i></a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                
+
+                 
+            </div>
+
+         </div>
+    </div>
+
+
+    <!-- Link Admin.js -->
+    <script src="admin.js"></script>
+</body>
+</html>
+
+drinks category
